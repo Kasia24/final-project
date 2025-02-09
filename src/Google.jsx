@@ -1,4 +1,3 @@
-// GoogleLoginButton.jsx
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
 import firebase from "./firebase-config";

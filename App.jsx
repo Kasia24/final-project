@@ -1,19 +1,19 @@
 // App.jsx
 import React, { useState, useEffect } from "react";
-import GoogleLoginButton from "./GoogleLoginButton";
-import firebase from "./firebase-config";
+import GoogleLoginButton from "./src/Google";
+import firebaseConfig from "./src/firebaseConfig";
 
 const App = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
     // Nasłuchuj na zmiany stanu użytkownika
-    const unsubscribe = firebase.auth().onAuthStateChanged(setUser);
+    const unsubscribe = firebaseConfig.auth().onAuthStateChanged(setUser);
     return () => unsubscribe();
   }, []);
 
   const handleLogout = async () => {
-    await firebase.auth().signOut();
+    await firebaseConfig.auth().signOut();
     setUser(null);
   };
 
