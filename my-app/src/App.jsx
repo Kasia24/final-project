@@ -60,7 +60,7 @@ const Header = () => {
         ) : (
           <button
             onClick={handleLogin}
-            className="bg-white border flex items-center px-4 py-2 rounded shadow"
+            className="black border flex items-center px-4 py-2 rounded shadow"
           >
             <img src="/google-icon.png" alt="Google" className="h-5 w-5 mr-2" />
             Google
