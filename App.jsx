@@ -1,4 +1,3 @@
-// App.jsx
 import React, { useState, useEffect } from "react";
 import GoogleLoginButton from "./src/Google";
 import firebaseConfig from "./src/firebaseConfig";

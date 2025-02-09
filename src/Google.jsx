@@ -5,7 +5,7 @@ import firebaseConfig from "./firebaseConfig";
 const GoogleLoginButton = () => {
   const handleGoogleLogin = async () => {
     try {
-      const provider = new firebaseConfig.auth.GoogleAuthProvider();
+      const provider = firebaseConfig.provider;
       const result = await firebaseConfig.auth().signInWithPopup(provider);
       const user = result.user;
       console.log("User info:", user);
