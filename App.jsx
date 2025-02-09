@@ -1,74 +1,42 @@
-import { Link } from "react-router-dom";
-import { auth, provider, signInWithPopup, signOut } from "./src/firebaseConfig";
-import { useState } from "react";
+// App.jsx
+import React, { useState, useEffect } from "react";
+import GoogleLoginButton from "./GoogleLoginButton";
+import firebase from "./firebase-config";
 
-const Header = () => {
+const App = () => {
   const [user, setUser] = useState(null);
 
-  const handleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, provider);
-      setUser(result.user);
-    } catch (error) {
-      console.error("Błąd logowania:", error);
-    }
-  };
+  useEffect(() => {
+    // Nasłuchuj na zmiany stanu użytkownika
+    const unsubscribe = firebase.auth().onAuthStateChanged(setUser);
+    return () => unsubscribe();
+  }, []);
 
   const handleLogout = async () => {
-    await signOut(auth);
+    await firebase.auth().signOut();
     setUser(null);
   };
 
   return (
-    <header className="bg-white shadow-md p-4 flex justify-between items-center">
-      <div className="text-xl font-bold text-blue-600">MyApp</div>
-      <nav>
-        <ul className="flex space-x-4">
-          <li>
-            <Link to="/" className="text-gray-700 hover:text-blue-600">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      <div>
-        {user ? (
-          <div className="flex items-center space-x-2">
-            <img
-              src={user.photoURL}
-              alt="Avatar"
-              className="h-8 w-8 rounded-full"
-            />
-            <span className="text-gray-700">{user.displayName}</span>
-            <button
-              onClick={handleLogout}
-              className="ml-4 bg-red-500 text-white px-3 py-1 rounded"
-            >
-              Logout
-            </button>
-          </div>
-        ) : (
+    <div style={{ textAlign: "center", padding: "50px" }}>
+      {user ? (
+        <div>
+          <h1>Witaj, {user.displayName}!</h1>
           <button
-            onClick={handleLogin}
-            className="black border flex items-center px-4 py-2 rounded shadow"
+            onClick={handleLogout}
+            style={{ padding: "10px", cursor: "pointer" }}
           >
-            <img src="/google-icon.png" alt="Google" className="h-5 w-5 mr-2" />
-            Google
+            Wyloguj się
           </button>
-        )}
-      </div>
-    </header>
+        </div>
+      ) : (
+        <div>
+          <h1>Proszę, zaloguj się</h1>
+          <GoogleLoginButton />
+        </div>
+      )}
+    </div>
   );
 };
 
-export default Header;
+export default App;
