@@ -4,10 +4,10 @@
   },
   "name": "final-project",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "app.jsx",
   "devDependencies": {},
   "scripts": {
-    "dev": "node app.js"
+    "dev": "node app.jsx"
   },
   "keywords": [],
   "author": "",

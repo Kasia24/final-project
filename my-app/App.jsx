@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { auth, provider, signInWithPopup, signOut } from "./firebaseConfig";
+import { auth, provider, signInWithPopup, signOut } from "./src/firebaseConfig";
 import { useState } from "react";
 
 const Header = () => {
