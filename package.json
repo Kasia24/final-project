@@ -1,5 +1,16 @@
 {
   "dependencies": {
     "firebase": "^11.3.0"
-  }
+  },
+  "name": "final-project",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
