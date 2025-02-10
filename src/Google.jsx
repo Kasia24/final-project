@@ -30,6 +30,7 @@ const styles = {
     height: "40px",
     backgroundColor: "rgba(170, 178, 197, 0.2)",
     color: "rgba(0, 0, 0, 1)",
+    border: "1px solid rgba(170, 178, 197, 0.2)",
     borderRadius: "20px",
     cursor: "pointer",
     fontSize: "16px",
