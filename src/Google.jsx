@@ -1,12 +1,12 @@
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
-import { firebaseConfig } from "./firebaseConfig";
+import { auth, provider } from "./firebaseConfig";
+import { signInWithPopup } from "firebase/auth";
 
 const GoogleLoginButton = () => {
   const handleGoogleLogin = async () => {
     try {
-      const provider = firebaseConfig.provider;
-      const result = await firebaseConfig.auth().signInWithPopup(provider);
+      const result = await signInWithPopup(auth, provider);
       const user = result.user;
       console.log("User info:", user);
       // Możesz teraz przechować dane użytkownika w stanie aplikacji lub przekierować go do innej strony.
