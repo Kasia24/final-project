@@ -44,7 +44,6 @@ const styles = {
   icon: {
     width: "17.17px", // Icon width
     height: "18px", // Icon height
-    position: "absolute",
   },
   text: {
     fontFamily: "Roboto, Arial, sans-serif", // Font family
