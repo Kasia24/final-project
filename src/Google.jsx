@@ -28,7 +28,7 @@ const styles = {
     justifyContent: "center",
     width: "119.2px",
     height: "40px",
-    backgroundColor: "#fff",
+    backgroundColor: "rgba(170, 178, 197, 0.2)",
     color: "#000",
     borderRadius: "20px",
     cursor: "pointer",
