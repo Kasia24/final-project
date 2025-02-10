@@ -16,3 +16,6 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 export { auth, provider };
+
+//npm install firebase
+//npm install react-icons
