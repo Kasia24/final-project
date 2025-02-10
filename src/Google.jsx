@@ -44,6 +44,8 @@ const styles = {
   icon: {
     width: "17.17px", // Icon width
     height: "18px", // Icon height
+    top: "288px",
+    left: "936.16px",
   },
   text: {
     fontFamily: "Roboto, Arial, sans-serif", // Font family
