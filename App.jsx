@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from "react";
-import GoogleLoginButton from "./src/Google";
-import firebaseConfig from "./src/firebaseConfig";
+import GoogleLoginButton from "./Google";
+import { auth } from "./firebaseConfig"; // Poprawiony import
 
 const App = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
     // Nasłuchuj na zmiany stanu użytkownika
-    const unsubscribe = firebaseConfig.auth().onAuthStateChanged(setUser);
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user);
+    });
+
     return () => unsubscribe();
   }, []);
 
   const handleLogout = async () => {
-    await firebaseConfig.auth().signOut();
+    await auth.signOut();
     setUser(null);
   };
 
