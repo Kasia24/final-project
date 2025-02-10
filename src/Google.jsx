@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGoogle } from "react-icons/fa";
-import firebaseConfig from "./firebaseConfig";
+import { firebaseConfig } from "./firebaseConfig";
 
 const GoogleLoginButton = () => {
   const handleGoogleLogin = async () => {
