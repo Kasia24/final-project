@@ -44,9 +44,6 @@ const styles = {
   icon: {
     width: "17.17px", // Icon width
     height: "18px", // Icon height
-    position: "absolute", // Absolute positioning for the icon
-    top: "288px", // Icon top position
-    left: "936.16px", // Icon left position
   },
   text: {
     fontFamily: "Roboto, Arial, sans-serif", // Font family
@@ -56,9 +53,6 @@ const styles = {
     letterSpacing: "2%", // Letter spacing
     width: "54.38px", // Width of the text area
     height: "20px", // Height of the text area
-    position: "absolute", // Absolute positioning for text
-    top: "287px", // Position top
-    left: "962.87px", // Position left
   },
 };
 export default GoogleLoginButton;
