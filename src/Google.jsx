@@ -53,6 +53,7 @@ const styles = {
     letterSpacing: "2%", // Letter spacing
     width: "54.38px", // Width of the text area
     height: "20px", // Height of the text area
+    position: "absolute",
   },
 };
 export default GoogleLoginButton;
