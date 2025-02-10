@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import GoogleLoginButton from "./src/Google";
-import { auth } from "./src/firebaseConfig"; // Poprawiony import
+import { auth } from "./src/firebaseConfig";
 
 const App = () => {
   const [user, setUser] = useState(null);

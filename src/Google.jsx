@@ -35,26 +35,26 @@ const styles = {
     cursor: "pointer",
     fontSize: "16px",
     fontWeight: "500",
-    boxShadow: "1px 2px 3px 0px rgba(170, 178, 197, 0.2)", // ✅ Dokładny cień
+    boxShadow: "1px 2px 3px 0px rgba(170, 178, 197, 0.2)",
     transition: "background-color 0.2s ease",
     position: "absolute",
     top: "277px",
     left: "916.4px",
   },
   icon: {
-    width: "17.17px", // Icon width
-    height: "18px", // Icon height
+    width: "17.17px",
+    height: "18px",
     top: "288px",
     left: "936.16px",
   },
   text: {
-    fontFamily: "Roboto, Arial, sans-serif", // Font family
-    fontWeight: "500", // Font weight
-    fontSize: "14px", // Font size
-    lineHeight: "16.41px", // Line height
-    letterSpacing: "2%", // Letter spacing
-    width: "54.38px", // Width of the text area
-    height: "20px", // Height of the text area
+    fontFamily: "Roboto, Arial, sans-serif",
+    fontWeight: "500",
+    fontSize: "14px",
+    lineHeight: "16.41px",
+    letterSpacing: "2%",
+    width: "54.38px",
+    height: "20px",
     top: "287px",
     left: "962.87px",
   },
