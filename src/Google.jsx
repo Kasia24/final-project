@@ -42,12 +42,18 @@ const styles = {
     left: "916.4px",
   },
   icon: {
-    fontSize: "20px",
-    marginRight: "8px",
+    width: "17.17px", // Set width to 17.17px
+    height: "18px", // Set height to 18px
+    position: "absolute", // Absolute positioning for the icon
+    top: "288px", // Set top position to 288px
+    left: "936.16px", // Set left position to 936.16px
   },
   text: {
-    fontFamily: "Arial, sans-serif",
+    fontFamily: "Roboto, Arial, sans-serif", // Add Roboto font
+    fontWeight: "500", // Google font weight
+    fontSize: "14px", // Font size
+    lineHeight: "16.41px", // Line height
+    letterSpacing: "2%", // Letter spacing
   },
 };
-
 export default GoogleLoginButton;
