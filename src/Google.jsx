@@ -45,8 +45,6 @@ const styles = {
     width: "17.17px", // Set width to 17.17px
     height: "18px", // Set height to 18px
     position: "absolute", // Absolute positioning for the icon
-    top: "288px", // Set top position to 288px
-    left: "936.16px", // Set left position to 936.16px
   },
   text: {
     fontFamily: "Roboto, Arial, sans-serif", // Add Roboto font
