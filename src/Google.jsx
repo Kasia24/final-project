@@ -29,7 +29,7 @@ const styles = {
     width: "119.2px",
     height: "40px",
     backgroundColor: "rgba(170, 178, 197, 0.2)",
-    color: "#000",
+    color: "rgba(0, 0, 0, 1)",
     borderRadius: "20px",
     cursor: "pointer",
     fontSize: "16px",
