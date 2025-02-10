@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGoogle } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import { auth, provider } from "./firebaseConfig";
 import { signInWithPopup } from "firebase/auth";
 
@@ -7,9 +7,7 @@ const GoogleLoginButton = () => {
   const handleGoogleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-      console.log("User info:", user);
-      // Możesz teraz przechować dane użytkownika w stanie aplikacji lub przekierować go do innej strony.
+      console.log("User info:", result.user);
     } catch (error) {
       console.error("Error during Google login:", error.message);
     }
@@ -17,8 +15,8 @@ const GoogleLoginButton = () => {
 
   return (
     <button onClick={handleGoogleLogin} style={styles.button}>
-      <FaGoogle style={styles.icon} />
-      Zaloguj się przez Google
+      <FcGoogle style={styles.icon} />
+      <span style={styles.text}>Google</span>
     </button>
   );
 };
@@ -27,15 +25,27 @@ const styles = {
   button: {
     display: "flex",
     alignItems: "center",
-    padding: "10px 20px",
-    backgroundColor: "#4285F4",
-    color: "white",
-    borderRadius: "5px",
-    border: "none",
+    justifyContent: "center",
+    width: "119.2px",
+    height: "40px",
+    backgroundColor: "#fff",
+    color: "#000",
+    borderRadius: "20px",
     cursor: "pointer",
+    fontSize: "16px",
+    fontWeight: "500",
+    boxShadow: "1px 2px 3px 0px rgba(170, 178, 197, 0.2)", // ✅ Dokładny cień
+    transition: "background-color 0.2s ease",
+    position: "absolute",
+    top: "277px",
+    left: "916.4px",
   },
   icon: {
-    marginRight: "10px",
+    fontSize: "20px",
+    marginRight: "8px",
+  },
+  text: {
+    fontFamily: "Arial, sans-serif",
   },
 };
 
